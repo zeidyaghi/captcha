@@ -5,6 +5,7 @@
 ملاحظة: عند تنفيذ الأمثلة الحية والضغط على زر ارسال تظهر الرسالة التالية (405 Not Allowed)
  https://zeidyaghi.github.io/captcha/examples/captwebdevzy/captwebdevzy.htm
 وهذا يعود لموقع GitHub: 
+
 A 405 error happens when a web browser sends a request using an HTTP method that the server doesn’t allow.
 
 بينما تعمل الامثلة بشكل جيد على مواقع ثانية https://gbzy.free.nf/captcha/examples/captwebdevzy/captwebdevzy.htm
