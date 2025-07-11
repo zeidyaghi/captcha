@@ -3,12 +3,12 @@
 نماذج من الكابتشا  من إعدادي ، مع أمثلة يمكن تجريبها وتحميلها!
 مصادر الكابتشا التي استخدمتها يمكن تحميلها أيضاً.
 ملاحظة: عند تنفيذ الأمثلة الحية والضغط على زر ارسال تظهر الرسالة التالية (405 Not Allowed)
- 
+ https://zeidyaghi.github.io/captcha/examples/captwebdevzy/captwebdevzy.htm
 وهذا يعود لموقع GitHub: 
-[مثال](https://zeidyaghi.github.io/captcha/examples/captwebdevzy/captwebdevzy.htm)
+
 بينما تعمل الامثلة بشكل جيد على مواقع ثانية https://gbzy.free.nf/captcha/examples/captwebdevzy/captwebdevzy.htm
 
-على كل حال رابط الكابتشا على GitHub هو التالي:https://zeidyaghi.github.io/captcha/
+على كل حال رابط الكابتشا على GitHub هو التالي:https://zeidyaghi.github.io/captcha
 
 ورابط الكابتشا على موقع آخر ( يعمل بشكل طبيعي) هو التالي:https://gbzy.free.nf/captcha
 
