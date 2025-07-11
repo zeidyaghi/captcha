@@ -1,8 +1,0 @@
-﻿ملف signjq.htm 
-ملف ديمو ينقل إلى ملف يظهر ارسال الرساله
-ملف signalphanumericMM.htm 
-استخدام رسائل
-ملف signalphanumericAM.htmا
-ستخدام رسائل وتنبيهات
-ملف signalphanumericAM1.htm
-ستخدام رسائل وتنبيهات
