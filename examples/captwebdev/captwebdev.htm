@@ -1,0 +1,147 @@
+﻿<html dir="rtl">
+<!-- Code By Webdevtrick ( https://webdevtrick.com )Modify By Zeid Yaghi -->
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Add Comments أضف ملاحظاتك إلى دفتر الزوّار</title>
+    <link rel="stylesheet" href="style.css"/>
+ 
+   </head>
+
+<body style="width: 480px; margin-right: 400px; ">
+
+<p ><b><font face="Arial" color="#008000" size="3">مرحباً بكم في دفتر 
+الزوّار،ملاحظاتكم تسعدنا.   </font>
+<font face="Arial" color="#000080" size="3">ادخل المعلومات ورمز التحقق،من فضلك.<span lang="ar-sa"> </span></font>
+</b></p>
+ <img src="gb2.gif" alt="أهلاً بكم"/>
+ 
+<!--<!-- انشاء معرّف الرساله -->
+<div id="message" style="background:black; color:#00FF00; text-align:center; width:468px; display:none;">
+    <strong>!Message Sent تم إرسال الرسالة</strong>
+</div>
+<!-- نهاية معرّف الرساله  -->
+
+<form id="commentForm" action="../messagesent.htm" method="post" dir="rtl" style="width: 468px">
+<center>
+<input name="name" type="text"  style="border:1px red solid" autofocus placeholder="الاسم الكامل" required />
+<br/>
+<br/>
+<input name="email" type="text" autofocus placeholder="البريد الالكتروني" />
+<br/>
+<br/>
+<input name="website" type="text" autofocus placeholder="الموقع الالكتروني" />
+<br/>
+<br/>
+<textarea name="comment" cols="20" rows="2"  style="border:1px red solid" autofocus placeholder="ملاحظات" required>
+</textarea>
+</center>
+<section  dir="ltr">
+  <fieldset class="captchaField">
+    <span id="SuccessMessage" class="success">Thanks! , The Captcha Is Correct! ...تحقق ناجح</span>
+    <input type="text" id="UserCaptchaCode" class="CaptchaTxtField" autofocus placeholder='Enter Captcha     ادخل رمز التحقق' maxlength="6" required />
+    <span id="WrongCaptchaError" class="error"></span>
+    <div class='CaptchaWrap'>
+      <div id="CaptchaImageCode" class="CaptchaTxtField">
+        <canvas id="CapCode" class="capcode" width="300" height="80"></canvas>
+      </div> 
+      <input type="button" class="TFBtn"  /> <!--    زر لعرض صورة صح وصورة خطأ -->
+
+      <input type="button" class="ReloadBtn" title="Refresh"  onclick='CreateCaptcha();'/>
+            
+    </div>
+    <input type="button" class="btnSubmit" onclick="CheckCaptcha(); Submit();" value="Submit" title="Verify Captcha"/>
+  </fieldset>
+</section>
+<center>
+    <input id="submitBtn" name="Submit1" type="button" value="ارسال" title="ارسال المعلومات" />
+    <!--  إضافة معرّف id للزر: أضفنا id="submitBtn" للزر الخاص بالإرسال لتسهيل الوصول إليه من خلال الجافا سكريبت -->
+</center>
+</form>
+ <img src="gb22.png" alt="أهلاً بكم"/>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js'></script>
+<script  src="function.js"></script>
+<!-- لجافا سكريبت:
+
+استخدمنا jQuery لاختيار الزر ومعالجة الحدث click.
+عند الضغط على الزر، يتم عرض الرسالة 
+
+عبر تغيير خاصية display إلى block.
+
+تغيير نوع الزر: تم تغيير نوع الزر من submit إلى button لأنه في حال استخدام زر من نوع submit، سيتم 
+
+تنفيذ عملية إرسال النموذج بشكل افتراضي، مما قد يؤدي إلى إعادة تحميل الصفحة. 
+إذا كنت بحاجة إلى إرسال البيانات عبر الجافا سكريبت، يمكنك استبدال الكود المطلوب في مكان التعليق المخصص.
+
+بهذا التحديث، 
+سيتم عرض الرسالة عند الضغط على زر "إرسال".   -->
+
+ <!--<script>
+$(document).ready(function() {
+    $("#submitBtn").click(function() {
+        // إظهار رسالة النجاح
+        $("#message").css("display", "block");
+        $("#submitBtn").css("display", "none");
+
+        
+        // هنا يمكنك إضافة الكود لإرسال البيانات إذا كنت بحاجة إلى ذلك
+        // كود إرسال البيانات سيكون هنا
+    });
+});
+</script>-->
+<!--<script>
+$(document).ready(function() {
+    $("#submitBtn").click(function() {
+                event.preventDefault(); // منع الإرسال التلقائي للنموذج
+			 // التحقق من الحقول المطلوبة
+    const name = $('input[name="name"]').val().trim();
+    const comment = $('textarea[name="comment"]').val().trim();
+
+    if (name === "" || comment === "") {
+      alert("يرجى إدخال الاسم والملاحظات قبل المتابعة.");
+      return;  // إيقاف العملية إذا كانت الحقول المطلوبة فارغة
+    }
+    });
+});
+</script>-->
+<script>
+$(document).ready(function() {
+    $("#submitBtn").click(function(event) {  
+        event.preventDefault(); // منع الإرسال التلقائي للنموذج
+
+        // التحقق من الحقول المطلوبة
+        const name = $('input[name="name"]').val().trim();
+        const comment = $('textarea[name="comment"]').val().trim();
+        const captcha = $('#UserCaptchaCode').val().trim();
+
+        if (name === "" || comment === "") {
+            alert("يرجى إدخال الاسم والملاحظات قبل المتابعة.");
+            return;  // إيقاف العملية إذا كانت الحقول المطلوبة فارغة
+        }
+
+        // التحقق من الكابتشا
+        if (!CheckCaptcha()) {  
+            alert("ادخل رمز التحقق من فضلك.");
+            return;  // إيقاف العملية إذا كانت الكابتشا غير صحيحة
+        }
+
+        // إذا كانت الحقول والكابتشا صحيحة، يمكن إرسال النموذج
+        $("#commentForm").submit();  // إرسال النموذج بعد التحقق
+    });
+
+    // دالة التحقق من الكابتشا
+    function CheckCaptcha() {
+        var isValid = ValidateCaptcha(); // استخدم دالة ValidateCaptcha للتحقق
+        if (isValid) {
+            return true;  // الكابتشا صحيحة
+        } else {
+            return false;  // الكابتشا غير صحيحة
+        }
+    }
+});
+</script>
+
+
+
+</body>
+</html>
