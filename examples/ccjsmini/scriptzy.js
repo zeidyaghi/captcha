@@ -33,7 +33,7 @@ checkBtn.addEventListener("click", e =>{
   if(inputVal == captcha.innerText){ //if captcha matched
     statusTxt.style.color = "#4db2ec";
     statusTxt.innerText = "تم التحقق من الرمز بنجاح :سيتم الانتقال إلى دفتر الزوّار";
-    window.location.href = "s_t_b.htm";
+    window.location.href = "s_t_bscr.htm";
       setTimeout(()=>{ //calling removeContent & getCaptcha after 20 seconds
       removeContent();
   //    getCaptcha();
