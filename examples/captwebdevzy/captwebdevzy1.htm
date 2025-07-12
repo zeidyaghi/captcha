@@ -97,7 +97,7 @@ $(document).ready(function() {
             return;  // إيقاف العملية إذا كانت الكابتشا غير صحيحة
         }
                 // إذا كانت الحقول والكابتشا صحيحة، يمكن إرسال النموذج
-        $("#commentForm").submit();  // إرسال النموذج بعد التحقق
+     //   $("#commentForm").submit();  // إرسال النموذج بعد التحقق
     
        // دالة التحقق من الكابتشا
     function CheckCaptcha() {
@@ -110,7 +110,7 @@ $(document).ready(function() {
     }
         // إذا كانت الحقول ليست فارغة، يمكن إرسال النموذج
         $("#message").css("display", "block");  // عرض رسالة نجاح
-       // $("#submitBtn").css("display", "none");  // إخفاء الزر بعد الضغط عليه
+        $("#submitBtn").css("display", "none");  // إخفاء الزر بعد الضغط عليه
        // $("#commentForm").submit();  // إرسال النموذج بعد التحقق
     });
 });
