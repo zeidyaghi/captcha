@@ -10,6 +10,7 @@ A 405 error happens when a web browser sends a request using an HTTP method that
 
 بينما تعمل الامثلة بشكل جيد على مواقع ثانية https://gbzy.free.nf/captcha/examples/captwebdevzy/captwebdevzy.htm
 
+ولتجنب هذه المشكلة غيّرت قليلاً في الأكواد(تجنبت توجيه الصفحات في النماذج!!!)
 على كل حال رابط الكابتشا على GitHub هو التالي:https://zeidyaghi.github.io/captcha
 
 ورابط الكابتشا على موقع آخر ( يعمل بشكل طبيعي) هو التالي:https://gbzy.free.nf/captcha
