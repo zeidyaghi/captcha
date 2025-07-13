@@ -81,7 +81,7 @@
 </div>
 <!-- نهاية معرّف الرساله  -->
 
-<form id="commentForm" action="" method="post" dir="rtl" style="width: 468px">
+<form id="commentForm" action="../messagesent1.htm" method="get" dir="rtl" style="width: 468px">
 
  
   <p>المعلومات</p>
@@ -168,10 +168,10 @@ $(document).ready(function() {
         }
 
         // إذا كانت الحقول والكابتشا صحيحة، يمكن إرسال النموذج
-        //$("#commentForm").submit();  // إرسال النموذج بعد التحقق، تعليق التعليمه في حالة تشغيل الصفحة في جيت هب فقط
+        $("#commentForm").submit();  // إرسال النموذج بعد التحقق، 
         // إظهار رسالة النجاح
         $("#message").css("display", "block");
-       // $("#submitBtn").css("display", "none");
+        $("#submitBtn").css("display", "none");
 
         
         // هنا يمكنك إضافة الكود لإرسال البيانات إذا كنت بحاجة إلى ذلك
