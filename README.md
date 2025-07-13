@@ -8,8 +8,11 @@
 
 تظهر الرسالة التالية (405 Not Allowed)
 
-A 405 error happens when a web browser sends a request using an HTTP method that the server doesn’t allow.
-وهذا يعود لموقع GitHub: 
+
+(A 405 error happens when a web browser sends a request using an HTTP method that the server doesn’t allow.)
+وهذا يعود لموقع 
+
+GitHub: 
 
 بينما تعمل الامثلة بشكل جيد على مواقع ثانية https://gbzy.free.nf/captcha/examples/captwebdevzy/captwebdevzy.htm
 رسالة الخطأ 405 Not Allowed تعني أن المتصفح أرسل طلبًا (عادةً POST) إلى الخادم،
