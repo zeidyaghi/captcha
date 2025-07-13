@@ -22,7 +22,7 @@
 </div>
 <!-- نهاية معرّف الرساله  -->
 
-<form id="commentForm" action="../messagesent.htm" method="get" dir="rtl" style="width: 468px">
+<form id="commentForm" action="../messagesent1.htm" method="get" dir="rtl" style="width: 468px">
 <center>
 <input name="name" type="text"  style="border:1px red solid" autofocus placeholder="الاسم الكامل" required />
 <br/>
@@ -96,6 +96,8 @@ $(document).ready(function() {
             alert("ادخل رمز التحقق من فضلك.");
             return;  // إيقاف العملية إذا كانت الكابتشا غير صحيحة
         }
+        // إذا كانت الحقول والكابتشا صحيحة، يمكن إرسال النموذج
+        $("#commentForm").submit();  // إرسال النموذج بعد التحقق
 
         // إظهار رسالة النجاح
         $("#message").css("display", "block");
