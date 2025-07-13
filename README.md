@@ -8,9 +8,8 @@ A 405 error happens when a web browser sends a request using an HTTP method that
 
 بينما تعمل الامثلة بشكل جيد على مواقع ثانية https://gbzy.free.nf/captcha/examples/captwebdevzy/captwebdevzy.htm
 رسالة الخطأ 405 Not Allowed تعني أن المتصفح أرسل طلبًا (عادةً POST) إلى الخادم، ولكن الخادم (في هذه الحالة GitHub Pages) لا يسمح باستخدام هذا النوع من الطلبات في ذلك السياق.
-السبب الجوهري: هو أن (GitHub Pages) هو خادم ثابت (Static Hosting)، ي لا يدعم طلبات (POST) أو أي معالجة من جانب الخادم (مثل PHP، أو إرسال النماذج).
-عندما تضغط على زر "إرسال" في نموذج <form> يستخدم method="post"، يحاول المتصفح إرسال البيانات إلى الخادم. لكن:
-على GitHub Pages، يُسمح فقط بطلبات GET لعرض الصفحات والملفات.
+السبب الجوهري: هو أن (GitHub Pages) هو خادم ثابت (Static Hosting)، أي لا يدعم طلبات (POST) أو أي معالجة من جانب الخادم (مثل PHP، أو إرسال النماذج).
+عندما تضغط على زر "إرسال" في نموذج <form> يستخدم (method="post")، يحاول المتصفح إرسال البيانات إلى الخادم. لكن على GitHub Pages، يُسمح فقط بطلبات GET لعرض الصفحات والملفات.
 لذلك، يظهر الخطأ 405 Method Not Allowed عند محاولة POST.
 ولتجنب هذه المشكلة  استبدلت طريقة (POST ب GET).اختفت المشكلة ورسائل الخطأ!!!!!
 على كل حال رابط الكابتشا على GitHub هو التالي:     https://zeidyaghi.github.io/captcha
